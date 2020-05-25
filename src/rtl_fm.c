@@ -975,6 +975,8 @@ static void optimal_settings(int freq, int rate)
 	}
 	capture_freq = freq;
 	capture_rate = dm->downsample * dm->rate_in;
+	/* timc */
+	fprintf(stderr, "listening:(freq = %d)\n", freq );
 	if (verbosity)
 		fprintf(stderr, "capture_rate = dm->downsample * dm->rate_in = %d * %d = %d\n", dm->downsample, dm->rate_in, capture_rate );
 	if (!d->offset_tuning) {
